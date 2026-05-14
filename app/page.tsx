@@ -346,7 +346,7 @@ export default function BerkshireCareStaffingWebsite() {
   </select>
 
   <textarea
-    rows="4"
+    rows={4}
     name="experience"
     placeholder="Tell us about your experience"
     className="w-full p-4 rounded-xl border"
