@@ -44,39 +44,41 @@ export default function BerkshireCareStaffingWebsite() {
   return (
     <div className="font-sans text-slate-700 bg-white">
       {/* Header */}
-      <header className="bg-[#123C73] text-white sticky top-0 z-50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl md:text-3xl font-bold">
-              Berkshire Care Staffing
-            </h1>
-            <p className="text-sm text-slate-200">
-              A trading name of Intraworld Limited
-            </p>
-          </div>
+     <header className="bg-[#123C73] text-white sticky top-0 z-50 shadow-lg">
+  <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div className="flex items-center gap-3">
+  <img
+    src="/logo.png"
+    alt="Berkshire Care Staffing Logo"
+    className="h-40 w-auto"
+  />
 
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#home" className="hover:text-teal-300">
-              Home
-            </a>
-            <a href="#about" className="hover:text-teal-300">
-              About
-            </a>
-            <a href="#services" className="hover:text-teal-300">
-              Services
-            </a>
-            <a href="#careers" className="hover:text-teal-300">
-              Careers
-            </a>
-            <a href="#clients" className="hover:text-teal-300">
-              For Clients
-            </a>
-            <a href="#contact" className="hover:text-teal-300">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+  <h1 className="text-2xl md:text-3xl font-bold">
+    Berkshire Care Staffing
+  </h1>
+</div>
+
+    <nav className="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#home" className="hover:text-teal-300">
+        Home
+      </a>
+
+      <a href="#about" className="hover:text-teal-300">
+        About
+      </a>
+
+      <a href="#services" className="hover:text-teal-300">
+        Services
+      </a>
+
+      <a href="#contact" className="hover:text-teal-300">
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+
+{/* Hero */}
 
       {/* Hero */}
       <section
@@ -127,7 +129,59 @@ export default function BerkshireCareStaffingWebsite() {
           </div>
         </div>
       </section>
+      {/* Trust Signals */}
+      <section className="bg-slate-50 py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Why Organisations Choose Us
+            </h2>
 
+            <p className="text-slate-600 max-w-3xl mx-auto">
+              We provide dependable, compliant and responsive staffing
+              solutions tailored to the healthcare sector.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="bg-white rounded-2xl shadow-sm p-8 border">
+              <h3 className="text-2xl font-semibold mb-4 text-slate-900">
+                DBS Checked Staff
+              </h3>
+
+              <p className="text-slate-600 leading-relaxed">
+                All staff undergo enhanced DBS checks and compliance
+                screening before placement.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-sm p-8 border">
+              <h3 className="text-2xl font-semibold mb-4 text-slate-900">
+                Mandatory Training
+              </h3>
+
+              <p className="text-slate-600 leading-relaxed">
+                Healthcare workers complete safeguarding and mandatory
+                healthcare training requirements.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-sm p-8 border">
+              <h3 className="text-2xl font-semibold mb-4 text-slate-900">
+                Rapid Staffing Response
+              </h3>
+
+              <p className="text-slate-600 leading-relaxed">
+                Fast-response staffing support for urgent and emergency
+                care cover requirements.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
       {/* About */}
       <section id="about" className="py-24 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -253,44 +307,58 @@ export default function BerkshireCareStaffingWebsite() {
               Apply Online
             </h3>
 
-            <form className="space-y-4">
+           <form
+  action="https://formspree.io/f/maqvgjgw"
+  method="POST"
+  className="space-y-4"
+>
               <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full p-4 rounded-xl border"
-              />
+    type="text"
+    name="fullName"
+    placeholder="Full Name"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full p-4 rounded-xl border"
-              />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full p-4 rounded-xl border"
-              />
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <select className="w-full p-4 rounded-xl border">
-                <option>Select Position</option>
-                <option>Healthcare Assistant</option>
-                <option>Support Worker</option>
-                <option>Cleaner</option>
-                <option>Driver</option>
-                <option>Kitchen Staff</option>
-              </select>
+  <select
+    name="position"
+    className="w-full p-4 rounded-xl border"
+  >
+    <option>Select Position</option>
+    <option>Healthcare Assistant</option>
+    <option>Support Worker</option>
+    <option>Cleaner</option>
+    <option>Driver</option>
+    <option>Kitchen Staff</option>
+  </select>
 
-              <textarea
-                rows="4"
-                placeholder="Tell us about your experience"
-                className="w-full p-4 rounded-xl border"
-              ></textarea>
+  <textarea
+    rows="4"
+    name="experience"
+    placeholder="Tell us about your experience"
+    className="w-full p-4 rounded-xl border"
+  ></textarea>
 
-              <button className="w-full bg-[#123C73] text-white py-4 rounded-2xl font-semibold hover:opacity-90 transition">
-                Submit Application
-              </button>
-            </form>
+  <button
+    type="submit"
+    className="w-full bg-[#123C73] text-white py-4 rounded-2xl font-semibold hover:opacity-90 transition"
+  >
+    Submit Application
+  </button>
+</form>
           </div>
         </div>
       </section>
@@ -323,39 +391,126 @@ export default function BerkshireCareStaffingWebsite() {
               Request Staff
             </h3>
 
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Organisation Name"
-                className="w-full p-4 rounded-xl border"
-              />
+            <form
+  action="https://formspree.io/f/meenbzge"
+  method="POST"
+  className="space-y-4"
+>
+  <input
+    type="text"
+    name="organisationName"
+    placeholder="Organisation Name"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <input
-                type="text"
-                placeholder="Contact Person"
-                className="w-full p-4 rounded-xl border"
-              />
+  <input
+    type="text"
+    name="contactPerson"
+    placeholder="Contact Person"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full p-4 rounded-xl border"
-              />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    className="w-full p-4 rounded-xl border"
+  />
 
-              <textarea
-                rows="5"
-                placeholder="Tell us about your staffing requirements"
-                className="w-full p-4 rounded-xl border"
-              ></textarea>
+  <textarea
+    rows="5"
+    name="staffingRequirements"
+    placeholder="Tell us about your staffing requirements"
+    className="w-full p-4 rounded-xl border"
+  ></textarea>
 
-              <button className="w-full bg-[#1CA6A6] text-white py-4 rounded-2xl font-semibold hover:opacity-90 transition">
-                Send Enquiry
-              </button>
-            </form>
+  <button
+    type="submit"
+    className="w-full bg-[#1CA6A6] text-white py-4 rounded-2xl font-semibold hover:opacity-90 transition"
+  >
+    Send Enquiry
+  </button>
+</form>
           </div>
         </div>
       </section>
+      {/* Policies & Compliance */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
 
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold text-[#123C73] mb-6">
+              Policies & Compliance
+            </h2>
+
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Berkshire Care Staffing is committed to maintaining
+              professional standards, safeguarding, compliance and
+              responsible staffing practices across all operations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <a
+              href="/safeguarding-policy.pdf"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Safeguarding Policy
+            </a>
+
+            <a
+              href="/gdpr-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              GDPR / Data Protection
+            </a>
+
+            <a
+              href="/recruitment-policy.pdf"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Recruitment Policy
+            </a>
+
+            <a
+              href="/complaints-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Complaints Procedure
+            </a>
+
+            <a
+              href="/equality-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Equality & Diversity
+            </a>
+
+            <a
+              href="/health-safety-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Health & Safety
+            </a>
+
+            <a
+              href="/lone-working-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Lone Working
+            </a>
+
+            <a
+              href="/medication-policy.docx"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              Medication Policy
+            </a>
+
+          </div>
+        </div>
+      </section>
       {/* Contact */}
       <section id="contact" className="py-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -373,7 +528,7 @@ export default function BerkshireCareStaffingWebsite() {
               <h3 className="text-xl font-bold text-[#123C73] mb-3">
                 Email
               </h3>
-              <p>fmmunywoki@gmail.com</p>
+              <p>info@berkshirecarestaffing.co.uk</p>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-3xl shadow">
@@ -406,39 +561,112 @@ export default function BerkshireCareStaffingWebsite() {
             solutions.
           </p>
 
-          <a
-            href="#contact"
-            className="inline-block bg-white text-[#123C73] px-8 py-4 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
-          >
-            Contact Us Today
-          </a>
+         <a
+  href="mailto:info@berkshirecarestaffing.co.uk"
+  className="text-[#123C73] hover:underline"
+>
+  info@berkshirecarestaffing.co.uk
+</a>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Berkshire Care Staffing
-            </h3>
-            <p>A trading name of Intraworld Limited</p>
-          </div>
-
-          <div className="md:text-right">
-            <p>Email: fmmunywoki@gmail.com</p>
-            <p>Berkshire, United Kingdom</p>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/447000000000"
+        href="https://wa.me/447748462435"
         className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:scale-105 transition"
       >
         WhatsApp Us
       </a>
+             {/* Footer */}
+      <footer className="bg-slate-900 text-white py-10">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="grid md:grid-cols-3 gap-10 mb-8">
+
+      <div>
+        <h3 className="text-xl font-bold mb-4">
+          Berkshire Care Staffing
+        </h3>
+
+        <p className="text-slate-300 text-sm leading-7">
+          Trusted provider of healthcare assistants, support workers,
+          temporary care staff and rapid staffing support across
+          Berkshire and the UK.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="font-semibold mb-4">
+          Policies
+        </h4>
+
+        <ul className="space-y-2 text-sm text-slate-300">
+          <li>
+            <a href="/terms-and-conditions.pdf" className="hover:text-teal-300">
+              Terms & Conditions
+            </a>
+          </li>
+
+          <li>
+           <a
+  href="/privacy-policy.pdf"
+  target="_blank"
+  className="hover:text-teal-300"
+>
+  Privacy Policy
+</a>
+          </li>
+
+          <li>
+            <a href="cookie-policy.pdf" className="hover:text-teal-300">
+              Cookie Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="safeguarding-policy.pdf" className="hover:text-teal-300">
+              Safeguarding Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="recruitment-policy.pdf" className="hover:text-teal-300">
+              Recruitment Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold mb-4">
+          Contact
+        </h4>
+
+        <ul className="space-y-2 text-sm text-slate-300">
+          <li>
+            info@berkshirecarestaffing.co.uk
+          </li>
+
+          <li>
+            +44 7748 462435
+          </li>
+
+          <li>
+            128 City Road, London, EC1V 2NX
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div className="border-t border-slate-700 pt-6 text-sm text-slate-400 text-center">
+      © 2026 Berkshire Care Staffing. All rights reserved.
+    </div>
+
+  </div>
+</footer>
     </div>
   );
 }
