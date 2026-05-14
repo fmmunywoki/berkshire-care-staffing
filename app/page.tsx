@@ -418,7 +418,7 @@ export default function BerkshireCareStaffingWebsite() {
   />
 
   <textarea
-    rows="5"
+    rows={5}
     name="staffingRequirements"
     placeholder="Tell us about your staffing requirements"
     className="w-full p-4 rounded-xl border"
