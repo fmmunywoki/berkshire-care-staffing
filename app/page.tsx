@@ -654,7 +654,7 @@ export default function BerkshireCareStaffingWebsite() {
           </li>
 
           <li>
-            128 City Road, London, EC1V 2NX
+            Berkshire & Surrounding Areas
           </li>
         </ul>
       </div>
