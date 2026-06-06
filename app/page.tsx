@@ -574,7 +574,7 @@ export default function BerkshireCareStaffingWebsite() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/447748462435"
+        href="https://wa.me/447767903674"
         className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:scale-105 transition"
       >
         WhatsApp Us
@@ -650,7 +650,7 @@ export default function BerkshireCareStaffingWebsite() {
           </li>
 
           <li>
-            +44 7748 462435
+            +44 7767 903674
           </li>
 
           <li>
